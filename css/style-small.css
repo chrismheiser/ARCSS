@@ -1,0 +1,115 @@
+/*
+	Spatial by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+*/
+
+/* Basic */
+
+	body, input, select, textarea {
+		font-size: 12pt;
+	}
+
+	header.major {
+		margin-bottom: 2em;
+	}
+
+/* Image */
+
+	.image.captioned {
+		margin-bottom: 2em;
+	}
+
+		.image.captioned h3 {
+			padding: 1em;
+		}
+
+/* Feature */
+
+	.feature-grid {
+		position: center;
+	}
+
+	.feature-grid:after {
+		clear: both;
+		content: '';
+		display: block;
+	}
+
+	.feature-grid .feature {
+		display: block;
+		width: 90%;
+		margin-left: 5 !important;
+		margin-right: 5 !important;
+		display: inline-block;
+		margin: auto;
+	}
+
+	.feature-grid .feature .content {
+		width: 100%;
+		margin-right: 1 !important;
+		margin-left: 1 !important;
+		text-align: center;
+	}
+
+	.feature-grid .feature .image {
+		margin-left: 1 !important;
+		margin-right: 1 !important;
+		margin-bottom: 1em;
+		text-align: center;
+	}
+
+	.feature-grid .feature .image img {
+		display: inline;
+		text-align: center;
+		margin:auto;
+		max-width: 100%;
+	}
+
+	.feature-grid .feature .content, .feature-grid .feature .image {
+		display: block;
+		margin-left: 5% !important;
+		margin-right: 5% !important;
+		text-align: center !important;
+		width: 100%;
+	}
+
+/* Banner */
+
+	#banner {
+		padding: 6em 2em 6em 2em;
+	}
+
+		#banner br {
+			display: none;
+		}
+
+		#banner h2 {
+			font-size: 2.25em;
+		}
+
+		#banner p {
+			font-size: 1.25em;
+		}
+
+/* Main */
+
+	#main {
+		padding-top: 2em;
+	}
+
+/* Wrapper */
+
+	.wrapper {
+		padding: 3em 0 1em 0;
+	}
+
+/* Footer */
+
+	#footer {
+		padding: 3em 0 2em 0;
+	}
+
+		#footer .icons {
+			font-size: 1em;
+		}

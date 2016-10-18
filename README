@@ -1,0 +1,72 @@
+
+GALLERY GENERATOR
+
+Requirements: Python 2.7
+
+——————————————————————————————————————————————————
+
+PURPOSE
+
+This script will auto-generate HTML code for your new images and update the gallery.html with the new code. It will also create thumbnail images from each image to improve loading times on the website.  
+
+——————————————————————————————————————————————————
+
+PREPARATION
+
+
+1. Install Xcode command line tools, follow prompts:
+
+	 xcode-select --install
+
+2. Install Homebrew:
+
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+3. Install libjpeg support:
+
+	brew install libjpeg
+
+2. Install BeautifulSoup package from Terminal: 
+
+	 sudo pip2.7 install beautifulsoup4
+
+
+3. Install Pillow package from Terminal: 
+
+	 sudo pip2.7 install pillow
+
+——————————————————————————————————————————————————
+
+RUNNING THE SCRIPT
+
+
+1. Move new photos into the "ARCSS_Website/images/GalleryPhotos" folder
+
+2a. Navigate to the “ARCSS_Website” folder using Terminal. “gallery_generator.py” should be in this folder.
+
+2b. Use the “cd” command in Terminal to navigate to a specific folder.
+
+3. Run the script with command: 
+	
+	python gallery_generator.py
+
+4. Enter captions whenever prompted
+
+5. Done!
+
+
+———————————————————————————————————————————————————
+
+NOTES 
+
+- The "captions.json" file will store captions for individual images. You may enter captions manually before running the script, or wait for the script to prompt you. 
+
+- When running the script, if a caption is not found for a specific image, it will prompt you to enter a caption. If you do not enter one, it will leave the caption blank. 
+
+- You may edit the "captions.json" file at any time to change a caption. Re-run the script after making any changes. 
+
+- Gallery thumbnail photos are created at a 200x200 size. 
+
+- Profile photos on the “People” page should be 200x200 size.
+
+- If your photo appears in the wrong orientation, it’s because that the web browser cannot read the EXIF data from the photo. It displays in the original orientation because it does not know that you have edited it. Open the original photo on your computer and “Export” a new version of the same photo. This will give it the desired orientation as an original property of the photo. 

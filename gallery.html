@@ -1,0 +1,365 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>
+   Photo Gallery
+  </title>
+  <link href="lightbox2-master/dist/css/lightbox.min.css" rel="stylesheet">
+   <script type="text/javascript">
+    function showImage(imgName) {
+				var img = document.createElement('img');
+				img.src = imgName;
+				div = document.getElementById('image-panel')
+				//document.getElementById('top-container').appendChild(div)
+    			document.getElementById('image-panel').appendChild(img)
+    			var oldImg = document.getElementById("image-panel");
+				oldImg.replaceChild(img, oldImg.childNodes[0]);
+			}
+   </script>
+   <style type="text/css">
+    .form-style-6{
+		    font: 95% Arial, Helvetica, sans-serif;
+		    max-width: 400px;
+		    margin: 10px auto;
+		    padding: 16px;
+		    background: #F7F7F7;
+		}
+		.form-style-6 h1{
+		    background: #43D1AF;
+		    padding: 20px 0;
+		    font-size: 140%;
+		    font-weight: 300;
+		    text-align: center;
+		    color: #fff;
+		    margin: -16px -16px 16px -16px;
+		}
+		.form-style-6 input[type="text"],
+		.form-style-6 input[type="date"],
+		.form-style-6 input[type="datetime"],
+		.form-style-6 input[type="email"],
+		.form-style-6 input[type="number"],
+		.form-style-6 input[type="search"],
+		.form-style-6 input[type="time"],
+		.form-style-6 input[type="url"],
+		.form-style-6 textarea,
+		.form-style-6 select
+		{
+		    -webkit-transition: all 0.30s ease-in-out;
+		    -moz-transition: all 0.30s ease-in-out;
+		    -ms-transition: all 0.30s ease-in-out;
+		    -o-transition: all 0.30s ease-in-out;
+		    outline: none;
+		    box-sizing: border-box;
+		    -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    width: 100%;
+		    background: #fff;
+		    margin-bottom: 4%;
+		    border: 1px solid #ccc;
+		    padding: 3%;
+		    color: #555;
+		    font: 95% Arial, Helvetica, sans-serif;
+		}
+		.form-style-6 input[type="text"]:focus,
+		.form-style-6 input[type="date"]:focus,
+		.form-style-6 input[type="datetime"]:focus,
+		.form-style-6 input[type="email"]:focus,
+		.form-style-6 input[type="number"]:focus,
+		.form-style-6 input[type="search"]:focus,
+		.form-style-6 input[type="time"]:focus,
+		.form-style-6 input[type="url"]:focus,
+		.form-style-6 textarea:focus,
+		.form-style-6 select:focus
+		{
+		    box-shadow: 0 0 5px #43D1AF;
+		    padding: 3%;
+		    border: 1px solid #43D1AF;
+		}
+
+		.form-style-6 input[type="submit"],
+		.form-style-6 input[type="button"]{
+		    box-sizing: border-box;
+		    -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    width: 100%;
+		    padding: 3%;
+		    background: #43D1AF;
+		    border-bottom: 2px solid #30C29E;
+		    border-top-style: none;
+		    border-right-style: none;
+		    border-left-style: none;
+		    color: #fff;
+		}
+		.form-style-6 input[type="submit"]:hover,
+		.form-style-6 input[type="button"]:hover{
+		    background: #2EBC99;
+		}
+
+    img {
+      image-orientation: from-image;
+    }
+
+		.gallery {
+			width: 50%;
+		}
+
+		.thumbnails img {
+			height: 80px;
+			width: 80px;
+			border: 1px solid #ccc;
+			margin: 0 1px 1px 0;
+		}
+
+		.thumbnails img:hover {
+
+			cursor:pointer;
+			border: 1px solid #777;
+		}
+    
+		.header {
+			opacity: .95;
+		}
+   </style>
+   <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+   <meta content="" name="description"/>
+   <meta content="" name="keywords"/>
+   <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+   <script src="js/jquery.min.js">
+   </script>
+   <script src="js/skel.min.js">
+   </script>
+   <script src="js/skel-layers.min.js">
+   </script>
+   <script src="js/init.js">
+   </script>
+   <script src="https://code.jquery.com/jquery-1.10.2.js">
+   </script>
+   <noscript>
+    <link href="css/skel.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/style-xlarge.css" rel="stylesheet"/>
+   </noscript>
+  </link>
+ </head>
+ <body>
+  <!-- Header -->
+  <header class="header" id="header">
+   <h1>
+    <strong>
+     <a href="index.html">
+      Arctic Glacial Lakes Project
+     </a>
+    </strong>
+   </h1>
+   <nav id="nav">
+    <ul>
+     <li>
+      <a href="people.html">
+       People
+      </a>
+     </li>
+     <li>
+      <a href="studylakes.html">
+       Lakes
+      </a>
+     </li>
+     <li>
+      <a href="project.html">
+       Projects
+      </a>
+     </li>
+     <li>
+      <a href="gallery.html">
+       Gallery
+      </a>
+     </li>
+     <li>
+      <a href="blog.html">
+       What's New?
+      </a>
+     </li>
+     <li>
+      <a class="icon fa-facebook" href="https://www.facebook.com/LakePetersProject/">
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </header>
+  <!-- Main -->
+  <section class="wrapper" id="main">
+   <div align="center" class="container">
+    <header class="major special">
+     <h2>
+      Photo Gallery
+     </h2>
+     <p>
+      Research Project Photos
+     </p>
+    </header>
+    <!--<section align="center"> -->
+    <div align="center" class="gallery">
+     <div class="thumbnails">
+      <div id="bs4">
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/car5_ml.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/car5_ml.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/es1.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/es1.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/ds-5.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/ds-5.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/df_northwestview_2015.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/df_northwestview_2015.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/df_southside_2015.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/df_southside_2015.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/re3.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/re3.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/ds-2.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/ds-2.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/dk5.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/dk5.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/es3.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/es3.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/es5.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/es5.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/ds-1.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/ds-1.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/ES4.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/ES4.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/df_caribou_2015.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/df_caribou_2015.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/df_carnivorevalley.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/df_carnivorevalley.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/df_camp_2015.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/df_camp_2015.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/car1_ml.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/car1_ml.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/dk_1.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/dk_1.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/ds-3.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/ds-3.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/car3_ml.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/car3_ml.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/dk2.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/dk2.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/car2_ml.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/car2_ml.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/dk4.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/dk4.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/re4.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/re4.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/re2.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/re2.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/es4.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/es4.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/car4_ml.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/car4_ml.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/ds-4.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/ds-4.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/es2.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/es2.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/re1.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/re1.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/dk3.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/dk3.jpg"/>
+</a>
+<a class="example-image-link" data-lightbox="example-set" data-title="" href="images/GalleryPhotos/dk1_square.jpg">
+ <img alt="" class="example-image" src="images/GalleryPhotos/low/dk1_square.jpg"/>
+</a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <!-- Footer -->
+  <footer id="footer">
+   <div class="container">
+    <!-- <ul class="icons">
+						<li><a href="#" class="icon fa-facebook"></a></li>
+						<li><a href="#" class="icon fa-twitter"></a></li>
+						<li><a href="#" class="icon fa-github"></a></li>
+					</ul> -->
+    <ul>
+     <h4>
+      Partners &amp; Funding
+     </h4>
+     <h4>
+      <a href="https://www.nau.edu">
+       Northern Arizona University
+      </a>
+      ,
+      <a href="https://www.uaf.edu/">
+       University of Alaska Fairbanks
+      </a>
+      ,
+      <a href="www.alaskapacific.edu/">
+       Alaska Pacific University
+      </a>
+      ,
+     </h4>
+     <h4>
+      <a href="http://cpspolar.com">
+       CH2MHill – Polar Services
+      </a>
+      ,
+      <a href="http://www.fws.gov/refuge/arctic/">
+       US Fish and Wildlife Service Arctic Refuge
+      </a>
+      ,
+      <a href="http://fairbanksfodar.com">
+       Fairbanks Fodar
+      </a>
+      ,
+      <a href="https://www.mtholyoke.edu/proj/svalbard/welcome.shtml">
+       Svalbard REU
+      </a>
+      ,
+      <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=13426">
+       NSF Arctic System Science
+      </a>
+     </h4>
+    </ul>
+   </div>
+  </footer>
+  <script src="lightbox2-master/dist/js/lightbox-plus-jquery.js">
+  </script>
+  <script src="lightbox2-master/dist/js/lightbox-plus-jquery.min.js">
+  </script>
+ </body>
+</html>
